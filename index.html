@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <div id="container">
@@ -15,34 +21,56 @@
             <p id="picture-credit">Photo by <a href="https://unsplash.com/@grakozy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Greg Rakozy</a> on <a href="https://unsplash.com/photos/silhouette-photography-of-person-oMpAz-DN-9I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
         </div>
         <div id="signup-div">
-            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-            <br>
-            <p>You <em>know</em> you want to.</p>
+            <div id="signup-copy">
+                <p class="bold">Embark on a transformative journey to inner peace and well-being. Join us on a journey of mindfulness and sign up now.</p>
+                <br>
+                <p class="bold">You <em>know</em> you want to.</p>
+            </div>
             <form id="signup-form">
                 <div id="enter-info">
-                    <p>Let's do this!</p>
-                    <label for="first_name">First Name</label>
-                    <input type="text" name="first_name" id="first_name">
+                    <p class="bold">Let's do this!</p>
+                    <fieldset>
+                    <div class="input-item">
+                        <label for="first_name">*First Name</label>
+                        <input type="text" name="first_name" id="first_name" required>
+                    </div>
 
-                    <label for="last_name">Last Name</label>
-                    <input type="text" name="last_name" id="last_name">
+                    <div class="input-item">
+                        <label for="last_name">*Last Name</label>
+                        <input type="text" name="last_name" id="last_name" required>
+                    </div>
+                    </fieldset>
 
-                    <label for="user_email">Email Address</label>
-                    <input type="email" name="user_email" id="user_email">
+                    <fieldset>
+                    <div class="input-item">
+                        <label for="user_email">*Email Address</label>
+                        <input type="email" name="user_email" id="user_email" required>
+                    </div>
 
-                    <label for="user_phone">Phone Number</label>
-                    <input type="number" name="user_number" id="user_number">
+                    <div class="input-item">
+                        <label for="user_phone">Phone Number</label>
+                        <input type="tel" name="user_number" id="user_number" title="Enter 10-digit phone number with no dashes or dots (EX: 1234567890)" pattern="[0-9]{10}">
+                    </div>
+                    </fieldset>
 
-                    <label for="user_password">Password</label>
-                    <input type="password" name="user_password" id="user_password">
+                    <fieldset>
+                    <div class="input-item">
+                        <label for="user_password">*Password</label>
+                        <input type="password" name="user_password" id="user_password" required>
+                        <p id="password-check"></p>
+                    </div>
 
-                    <label for="confirm_password">Confirm Password</label>
-                    <input type="password" name="confirm_password" id="confirm_password">
+                    <div class="input-item">
+                        <label for="confirm_password">*Confirm Password</label>
+                        <input type="password" name="confirm_password" id="confirm_password" required>
+                    </div>
+                    </fieldset>
                 </div>
                 <button type="submit">Create Account</button>
-                <p>Already have an account? <a href="#">Log in</a></p>
+                <p id="haveAccount">Already have an account? <a href="#">Log in</a></p>
             </form>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
